@@ -1,33 +1,33 @@
 package factorymethod
 
-//Operator 是被封装的实际类接口
+//Operator
 type Operator interface {
 	SetA(int)
 	SetB(int)
 	Result() int
 }
 
-//OperatorFactory 是工厂接口
+//OperatorFactory
 type OperatorFactory interface {
 	Create() Operator
 }
 
-//OperatorBase 是Operator 接口实现的基类，封装公用方法
+//OperatorBase
 type OperatorBase struct {
 	a, b int
 }
 
-//SetA 设置 A
+//SetA
 func (o *OperatorBase) SetA(a int) {
 	o.a = a
 }
 
-//SetB 设置 B
+//SetB
 func (o *OperatorBase) SetB(b int) {
 	o.b = b
 }
 
-//PlusOperatorFactory 是 PlusOperator 的工厂类
+//PlusOperatorFactory
 type PlusOperatorFactory struct{}
 
 func (PlusOperatorFactory) Create() Operator {
@@ -36,17 +36,17 @@ func (PlusOperatorFactory) Create() Operator {
 	}
 }
 
-//PlusOperator Operator 的实际加法实现
+//PlusOperator Operator
 type PlusOperator struct {
 	*OperatorBase
 }
 
-//Result 获取结果
+//Result
 func (o PlusOperator) Result() int {
 	return o.a + o.b
 }
 
-//MinusOperatorFactory 是 MinusOperator 的工厂类
+//MinusOperatorFactory
 type MinusOperatorFactory struct{}
 
 func (MinusOperatorFactory) Create() Operator {
@@ -55,12 +55,12 @@ func (MinusOperatorFactory) Create() Operator {
 	}
 }
 
-//MinusOperator Operator 的实际减法实现
+//MinusOperator Operator
 type MinusOperator struct {
 	*OperatorBase
 }
 
-//Result 获取结果
+//Result
 func (o MinusOperator) Result() int {
 	return o.a - o.b
 }

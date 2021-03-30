@@ -1,5 +1,4 @@
-# 外观模式
+###Facade pattern. (nhóm cấu trúc - structural pattern)  
+Cung cấp một interface đơn giản để che giấu đi các xử lý phức tạp bên trong nó.  
 
-API 为facade 模块的外观接口，大部分代码使用此接口简化对facade类的访问。
-
-facade模块同时暴露了a和b 两个Module 的NewXXX和interface，其它代码如果需要使用细节功能时可以直接调用。
+> Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.

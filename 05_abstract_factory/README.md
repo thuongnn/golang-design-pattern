@@ -1,8 +1,6 @@
-# 抽象工厂模式
+###Abstract factory pattern (nhóm khởi tạo)
+Pattern này tạo ra một super factory để tạo ra các factory khác, là một pattern cấp cao hơn sao với Factory Method Pattern.  
 
-抽象工厂模式用于生成产品族的工厂，所生成的对象是有关联的。
+> Abstract Factory is a creational design pattern that provide an interface for creating families of  related or dependent objects without specifying their concrete classes.  
 
-如果抽象工厂退化成生成的对象无关联则成为工厂函数模式。
-
-比如本例子中使用RDB和XML存储订单信息，抽象工厂分别能生成相关的主订单信息和订单详情信息。
-如果业务逻辑中需要替换使用的时候只需要改动工厂函数相关的类就能替换使用不同的存储方式了。
+Reference link: https://gpcoder.com/4365-huong-dan-java-design-pattern-abstract-factory/
