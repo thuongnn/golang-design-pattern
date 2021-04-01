@@ -1,5 +1,8 @@
-# 观察者模式
+> Observer Pattern là một trong những Pattern thuộc nhóm hành vi (Behavior Pattern). Nó định nghĩa mối phụ thuộc một – nhiều giữa các đối tượng để khi mà một đối tượng có sự thay đổi trạng thái, tất các thành phần phụ thuộc của nó sẽ được thông báo và cập nhật một cách tự động.
+### Lợi ích:
+- Dễ dàng mở rộng với ít sự thay đổi : mẫu này cho phép thay đổi Subject và Observer một cách độc lập. Chúng ta có thể tái sử dụng các Subject mà không cần tái sử dụng các Observer và ngược lại. Nó cho phép thêm Observer mà không sửa đổi Subject hoặc Observer khác. Vì vậy, nó đảm bảo nguyên tắc Open/Closed Principle (OCP).
+- Sự thay đổi trạng thái ở 1 đối tượng có thể được thông báo đến các đối tượng khác mà không phải giữ chúng liên kết quá chặt chẽ.
+- Một đối tượng có thể thông báo đến một số lượng không giới hạn các đối tượng khác.
 
-观察者模式用于触发联动。
+Reference Link: https://gpcoder.com/4747-huong-dan-java-design-pattern-observer/
 
-一个对象的改变会触发其它观察者的相关动作，而此对象无需关心连动对象的具体实现。

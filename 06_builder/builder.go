@@ -1,6 +1,5 @@
 package builder
 
-//Builder 是生成器接口
 type Builder interface {
 	Part1()
 	Part2()
@@ -11,14 +10,12 @@ type Director struct {
 	builder Builder
 }
 
-// NewDirector ...
 func NewDirector(builder Builder) *Director {
 	return &Director{
 		builder: builder,
 	}
 }
 
-//Construct Product
 func (d *Director) Construct() {
 	d.builder.Part1()
 	d.builder.Part2()
